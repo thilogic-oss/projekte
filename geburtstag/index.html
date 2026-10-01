@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kranz abtreten - Spiele</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body><a href="../" aria-label="Zur Thilogic-Projektübersicht" style="display:block;position:relative;z-index:30;padding:11px 20px;background:#101014;color:#f5f4f7;font:600 14px/1.4 Segoe UI,sans-serif;text-decoration:underline;text-underline-offset:4px">← Thilogic · Alle Projekte</a>
+    <main class="app">
+      <section class="sidebar" aria-label="Kategorien">
+        <div class="brand">
+          <p>Kranz abtreten</p>
+          <h1>Spiele</h1>
+        </div>
+        <div class="sidebar-actions">
+          <button id="flowButton" class="settings-button" type="button" aria-haspopup="dialog" aria-controls="flowDialog">Ablauf</button>
+          <button id="settingsButton" class="settings-button" type="button" aria-haspopup="dialog" aria-controls="settingsDialog">Settings</button>
+        </div>
+        <div id="categoryList" class="category-list"></div>
+      </section>
+
+      <section class="content" aria-live="polite">
+        <div class="content-head">
+          <button id="backButton" class="icon-button" type="button" title="Vorherige Kategorie" aria-label="Vorherige Kategorie">
+            <span aria-hidden="true">&lt;</span>
+          </button>
+          <div>
+            <p id="categoryKicker" class="kicker">Kategorie</p>
+            <h2 id="categoryTitle">Sport</h2>
+          </div>
+        </div>
+
+        <div id="detailView" class="detail-view">
+          <section id="rollBox" class="roll-box" aria-label="Wuerfeln" hidden>
+            <div class="roll-actions">
+              <button id="rollCategoryButton" class="roll-button primary" type="button">Kategorie wuerfeln</button>
+              <button id="rollActionButton" class="roll-button" type="button">Aktion wuerfeln</button>
+            </div>
+            <div id="rollResult" class="roll-result">Erst Kategorie wuerfeln, dann Aktion unter der Kategorie.</div>
+          </section>
+
+          <div class="tabs" role="tablist" aria-label="Ansicht">
+            <button id="gamesTab" class="tab active" type="button" role="tab" aria-selected="true">Aktionen</button>
+            <button id="quizTab" class="tab" type="button" role="tab" aria-selected="false">Quiz</button>
+          </div>
+          <div id="gamesPanel" class="panel"></div>
+          <div id="quizPanel" class="panel" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="settingsDialog" class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" hidden>
+      <div class="modal-backdrop" data-close-settings></div>
+      <section class="modal-panel">
+        <div class="modal-head">
+          <h2 id="settingsTitle">Settings</h2>
+          <button id="closeSettingsButton" class="close-button" type="button" aria-label="Settings schliessen">&times;</button>
+        </div>
+        <label class="toggle-row">
+          <span>
+            <strong>Digitale Wuerfel</strong>
+            <small>Blendet die Kategorie- und Aktionswuerfel auf der Seite ein.</small>
+          </span>
+          <input id="diceToggle" type="checkbox">
+        </label>
+      </section>
+    </div>
+
+    <div id="flowDialog" class="modal" role="dialog" aria-modal="true" aria-labelledby="flowTitle" hidden>
+      <div class="modal-backdrop" data-close-flow></div>
+      <section class="modal-panel">
+        <div class="modal-head">
+          <h2 id="flowTitle">Ablauf</h2>
+          <button id="closeFlowButton" class="close-button" type="button" aria-label="Ablauf schliessen">&times;</button>
+        </div>
+        <div class="flow-list">
+          <article class="flow-item">
+            <p class="item-type">Vorher</p>
+            <h3 class="item-title">Start</h3>
+            <ul class="item-list">
+              <li>Eroeffnungsrede halten</li>
+              <li>Regeln erklaeren</li>
+            </ul>
+          </article>
+          <article class="flow-item">
+            <p class="item-type">Nachher</p>
+            <h3 class="item-title">Abschluss</h3>
+            <ul class="item-list">
+              <li>Dankesrede halten</li>
+              <li>Gruppenfoto machen</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div id="itemDetailsDialog" class="modal" role="dialog" aria-modal="true" aria-labelledby="itemDetailsTitle" hidden>
+      <div class="modal-backdrop" data-close-details></div>
+      <section class="modal-panel item-modal-panel">
+        <div class="modal-head">
+          <div>
+            <p id="itemDetailsType" class="kicker">Details</p>
+            <h2 id="itemDetailsTitle">Details</h2>
+          </div>
+          <button id="closeItemDetailsButton" class="close-button" type="button" aria-label="Details schliessen">&times;</button>
+        </div>
+        <div id="itemDetailsBody" class="item-details-body"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

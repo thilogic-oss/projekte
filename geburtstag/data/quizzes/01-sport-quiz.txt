@@ -1,0 +1,41 @@
+Titel: Sport Quiz
+---
+- Wie oft gewann Boris Becker das Tennisturnier Wimbledon?
+Typ: Quiz
+Details: Antwort: 3
+
+- Wenn erstes richtig dann: In welchen Jahren gewann Boris Becker Wimbledon?
+Typ: Quiz
+Details: Antwort: 1985, 1986, 1989
+
+- Gegen wen hat Deutschland bei der Fussball-WM verloren?
+Typ: Quiz
+Details: Antwort: Paraguay
+
+- Wer ist aktuell Tennisweltmeister im Herreneinzel?
+Typ: Quiz
+Details: Antwort: Jannik Sinner
+
+- Welche Masse hat ein Padel-Doppel-Feld?
+Typ: Quiz
+Details: Antwort: 10x20m
+
+- Wie viele Spieler stehen pro Mannschaft beim Basketball auf dem Feld?
+Typ: Quiz
+Details: Antwort: 5
+
+- In welchem Land wurde der Sport Padel erfunden?
+Typ: Quiz
+Details: Antwort: Mexiko
+
+- Wer haelt den aktuellen Marathon-Weltrekord?
+Typ: Quiz
+Details: Antwort: Sebastian Sawe
+
+- Wie hoch ist ein Tennisnetz in der Mitte?
+Typ: Quiz
+Details: Antwort: 91,4 cm
+
+- Wie nennt man den Sand auf einem Tennisplatz?
+Typ: Quiz
+Details: Antwort: Ziegelmehl, Tennissand oder Tennismehl

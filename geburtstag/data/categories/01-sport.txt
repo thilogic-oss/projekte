@@ -1,0 +1,23 @@
+Titel: Sport
+Nummer: 1
+---
+- Tennis-Bierpong
+Typ: Spiel
+Material: Eimer, Tennisschlaeger und Tennisbaelle
+Details: Simon bekommt 3 Ziele und 4 Baelle. Wenn er alle Ziele trifft, gewinnt er das Spiel nach Bierpong-Regeln. Wenn er nur 2 trifft, wird geresetet und er bekommt 4 neue Baelle. Fuer jeden verschossenen Ball gibt es einen Schluck Bier. Fuer jeden Schritt naeher zum Ziel gibt es einen Shot. Simon darf freiwillig naeher rangehen. Nach 3 Versuchen geht er automatisch naeher dran.
+
+- Gehe 2 Schritte zurueck
+Typ: Pechkarte
+
+- 3 vs. 1 Challenge
+Typ: Challenge
+Details: Simon tritt gegen 3 Gaeste an.
+Aufgaben: Liegestuetze | Fussball hochhalten | Papierflieger bauen
+
+- Flunkyball
+Typ: Spiel
+Details: Simon waehlt 2 Teams aus.
+
+- Reaktionsspiel 1 vs. 1
+Typ: Spiel
+Details: Simon sucht sich 3 Gaeste aus, gegen die er das Reaktionsspiel spielt. Es werden Koerperteile genannt, die dann angefasst werden muessen. In der Mitte liegt ein Gegenstand. Wenn dieser genannt wird, muss er schnell gegriffen werden. Wenn Simon den Gegenstand nicht bekommt, trinkt er. Es werden 5 Runden gespielt. Wenn Simon es 3-mal schafft, hat er gewonnen.

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sport",
+    "number": 1,
+    "name": "Sport",
+    "file": "data/categories/01-sport.txt",
+    "quiz": "data/quizzes/01-sport-quiz.txt"
+  },
+  {
+    "id": "filme",
+    "number": 2,
+    "name": "Filme",
+    "file": "data/categories/02-filme.txt",
+    "quiz": "data/quizzes/02-filme-quiz.txt"
+  },
+  {
+    "id": "videospiele",
+    "number": 3,
+    "name": "Videospiele",
+    "file": "data/categories/03-videospiele.txt",
+    "quiz": "data/quizzes/03-videospiele-quiz.txt"
+  },
+  {
+    "id": "musik",
+    "number": 4,
+    "name": "Musik",
+    "file": "data/categories/04-musik.txt",
+    "quiz": "data/quizzes/04-musik-quiz.txt"
+  },
+  {
+    "id": "ausland-reisen",
+    "number": 5,
+    "name": "Ausland / Reisen",
+    "file": "data/categories/05-ausland-reisen.txt",
+    "quiz": "data/quizzes/05-ausland-reisen-quiz.txt"
+  },
+  {
+    "id": "freunde",
+    "number": 6,
+    "name": "Freunde",
+    "file": "data/categories/06-freunde.txt",
+    "quiz": "data/quizzes/06-freunde-quiz.txt"
+  }
+]

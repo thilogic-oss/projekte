@@ -1,0 +1,25 @@
+Titel: Freunde
+Nummer: 6
+---
+- Alle, die ...
+Typ: Spiel
+Details: Alle Gaeste sehen die Kategorie, nur Simon nicht. Je nach Aussage muessen die Gaeste den Arm heben, sich hinsetzen oder stehen bleiben.
+Beispiele: Alle, die schon mal mit Simon feiern waren | Alle, die schon mal mit Simon im Urlaub waren | Alle mit weissen Schuhen | Alle, die mit Simon eine Sportart ausueben | Alle, die mit Simon verwandt sind | Alle, die aelter sind als Simon | Alle, die einen Fuehrerschein haben | Alle, die Single sind | Alle, die im selben Ort wie Simon wohnen
+
+- Gluecksspiel
+Typ: Spiel
+Optionen: Wuerfeln | Schere, Stein, Papier | Fingern
+
+- Person erraten
+Typ: Spiel
+Details: Simon bekommt die Augen verbunden und muss eine Person erraten, z. B. am Haendedruck.
+
+- Sortieren
+Typ: Spiel
+Details: Simon muss 12 Freiwillige sortieren.
+Aufgaben: Geburtstag | Hausnummer | Alter
+
+- Auf Tisch des Hauses - 1 vs. 1
+Typ: Spiel
+Details: Der Moderator ruft einen Gegenstand. Wer den Gegenstand als erstes zum Moderator bringt, gewinnt den Punkt.
+Beispiele: Sonnenbrille | Autoschluessel | Feuerzeug | Kronkorken | Ein linker Schuh | Etwas Rotes | Ein Foto von Simon auf dem Handy | Ein neues offenes Bier | Flaschenoeffner | Joker: Moderator darf sich was wuenschen

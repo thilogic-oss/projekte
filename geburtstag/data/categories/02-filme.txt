@@ -1,0 +1,24 @@
+Titel: Filme
+Nummer: 2
+---
+- Pantomime mit einem Gast
+Typ: Spiel
+Details: Simon und ein Gast stellen einen Film dar. Alle anderen muessen raten.
+Beispiele: Spider-Man | Titanic | Star Wars | Matrix | Hangover
+
+- Filme schlecht beschrieben
+Typ: Spiel
+Details: 3 Gaeste beschreiben jeweils einen Film moeglichst schlecht. Die Beschreibung darf nur aus einem Satz bestehen. Simon muss ihn erraten. Muster: 112-jaehriger spielt lieber im Schnee, als den Krieg zu beenden.
+Beispiele: Fast & Furious | Koenig der Loewen | Kevin allein zu Haus | Avatar Herr der Elemente | Ice Age
+Timer: 15
+
+- Sprich bis zur naechsten Challenge nur wie Yoda
+Typ: Aufgabe
+
+- Sound-Pantomime
+Typ: Spiel
+Details: Filme nur ueber Geraeusche darstellen.
+Beispiele: Star Wars | Jurassic Park | Fast & Furious | Titanic | Fluch der Karibik
+
+- Gehe 3 Schritte zurueck
+Typ: Pechkarte

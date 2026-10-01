@@ -1,0 +1,25 @@
+Titel: Videospiele
+Nummer: 3
+---
+- Game / Charakter erraten
+Typ: Spiel
+Details: Es werden 5 Charaktere beschrieben. Simon muss den Charakter und das Genre oder Spiel erraten. Beides ist jeweils einen Schluck wert.
+Benoetigt: 5 Freiwillige, die moeglichst nichts oder nicht viel mit Videospielen zu tun haben
+Beispiele: Lucario - Pokemon::https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png | Thresh - League of Legends::https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg | Trigger Happy - Skylanders::https://static.wikia.nocookie.net/skylanders/images/1/1f/Sky_trigger2.jpg/revision/latest?cb=20120224061342 | Gengar - Pokemon::https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png | Amumu - League of Legends::https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg
+
+- Verpixelte Videospiele erraten
+Typ: Spiel
+Details: Simon muss das Videospiel anhand eines verpixelten Screenshots erraten. Starte mit Pixelstufe 3 und stelle es nach und nach leichter.
+Beispiele: Minecraft::https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/60/Survival.png/revision/latest/scale-to-width-down/427?cb=20220702034959 | League of Legends::https://www.gamingcfg.com/img/723/Jax-League-of-Legends.jpg | Fortnite::FN%20Pixel.png | Rocket League::https://tjekspillet.dk/wp-content/uploads/2022/09/RocketLeague_Gameplay1.jpg | Among Us::https://images.pushsquare.com/screenshots/119576/300x200.jpg
+Pixelstufen: 3
+
+- Mache 5 Emotes aus Videospielen nach
+Typ: Aufgabe
+
+- Ferngesteuert
+Typ: Spiel
+Details: Mit Kreide wird ein Parcours auf den Boden gezeichnet. Die Gaeste schreien gleichzeitig Richtungen und Simon muss sich dadurch steuern lassen.
+
+- Glueck
+Typ: Glueckskarte
+Details: Die Gaeste entscheiden, wie viele Schritte gemacht werden, indem sie mittrinken.

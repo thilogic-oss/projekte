@@ -1,0 +1,41 @@
+Titel: Ausland / Reisen Quiz
+---
+- Welcher Flughafen gilt als der verkehrsreichste der Welt (Passagieraufkommen)?
+Typ: Quiz
+Details: Antwort: Hartsfield-Jackson Atlanta International Airport (USA)
+
+- In welchem Land gibt es leider nicht den besten Pizzakaese?
+Typ: Quiz
+Details: Antwort: Finnland
+
+- Welches Land hat weltweit die meisten UNESCO-Welterbestaetten?
+Typ: Quiz
+Details: Antwort: Italien
+
+- Nenne vier Laender ausser Deutschland, in denen du mit deinem Cousin Marvin schonmal im Urlaub warst.
+Typ: Quiz
+Details: Antwort: Niederlande, Italien, Daenemark, Frankreich
+
+- Was ist die meistgesprochene Muttersprache der Welt?
+Typ: Quiz
+Details: Antwort: Mandarin hat rund 988 Millionen Muttersprachler und liegt damit auf Platz eins der meistgesprochenen Sprachen.
+
+- Nenne mir ein Land, welches auf Deutsch mit dem Buchstaben H beginnt.
+Typ: Quiz
+Details: Antwort: Honduras, Haiti
+
+- Wie viele Laender sind in der EU?
+Typ: Quiz
+Details: Antwort: Die Europaeische Union hat aktuell 27 Mitgliedstaaten.
+
+- Wie viele Nachbarlaender hat Deutschland und wie heissen diese?
+Typ: Quiz
+Details: Antwort: Deutschland hat 9 Nachbarlaender. Daenemark, Niederlande, Belgien, Luxemburg, Frankreich, Schweiz, Oesterreich, Tschechien, Polen
+
+- Was ist das kleinste Land der Welt?
+Typ: Quiz
+Details: Antwort: Vatikanstadt
+
+- In wie viele Laender kann man mit dem deutschen Reisepass visafrei reisen (Stand Juli 2026)?
+Typ: Quiz
+Details: Antwort: Mit dem deutschen Reisepass kannst du in 193 Laender visafrei oder ohne vorheriges Visum einreisen.

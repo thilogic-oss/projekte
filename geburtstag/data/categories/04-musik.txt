@@ -1,0 +1,23 @@
+Titel: Musik
+Nummer: 4
+---
+- Lied gurgeln - 2 vs. 2
+Typ: Spiel
+Details: Zwei Teams treten gegeneinander an. Ein Song wird gegurgelt und das eigene Team muss ihn erraten.
+Beispiele: Mr. Brightside | Creep | Country Roads | Pokemon Theme | Sweet Caroline
+
+- Stimme einen Song an, den alle mitsingen muessen
+Typ: Aufgabe
+
+- Wer wuerde eher?
+Typ: Spiel
+Details: 10 Freiwilligen werden Fragen gestellt und sie muessen abstimmen, auf wen es am ehesten zutrifft. Anschliessend muss Simon dieselbe Person finden.
+Benoetigt: 10 Freiwillige
+Aufgaben: Wer wuerde eher ins Ausland ziehen? | Wer wuerde sich vor 0 Uhr komplett die Kante geben? | Wer wuerde im Urlaub verloren gehen? | Wer wuerde beim Feiern sein Handy verlieren? | Wer wuerde eine dumme Idee starten? | Wer wuerde heimlich von der Party abhauen? | Wer wuerde bei Karaoke komplett abliefern? | Wer wuerde am naechsten Morgen nichts mehr wissen? | Wer wuerde am ehesten reich werden? | Wer wuerde am ehesten sagen: "Ein Bier geht noch"?
+
+- Wer hat das aufgeschrieben?
+Typ: Spiel
+Details: Gaeste schreiben etwas ueber sich auf, das sie erlebt oder getan haben. Simon muss 10 Aussagen den richtigen Personen zuordnen.
+
+- Pech
+Typ: Pechkarte

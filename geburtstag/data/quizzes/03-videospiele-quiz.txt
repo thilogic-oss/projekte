@@ -1,0 +1,41 @@
+Titel: Videospiele Quiz
+---
+- Welchen Beruf ueben Mario und Luigi im Spiel eigentlich aus?
+Typ: Quiz
+Details: Antwort: Klempner
+
+- Welche Farbe hat Sonic the Hedgehog?
+Typ: Quiz
+Details: Antwort: Blau
+
+- Welche bekannte Drachen-Figur aus einer aelteren Spielreihe war das Aushaengeschild des ersten Skylanders-Spiels?
+Typ: Quiz
+Details: Antwort: Spyro
+
+- Wofuer steht die Abkuerzung "GG", die man nach jedem Match in den Chat schreibt?
+Typ: Quiz
+Details: Antwort: Good Game
+
+- Wie heisst der gruen gekleidete Held in "The Legend of Zelda", der eben nicht Zelda heisst?
+Typ: Quiz
+Details: Antwort: Link
+
+- Welches Spiel ist mit weitem Abstand das meistverkaufte Videospiel aller Zeiten?
+Typ: Quiz
+Details: Antwort: Minecraft
+
+- Unter welchem Namen trat Super Mario 1981 in "Donkey Kong" zum ersten Mal auf?
+Typ: Quiz
+Details: Antwort: Jumpman
+
+- Aufgrund welches Spiels muss Kevin uns noch ein Essen ausgeben?
+Typ: Quiz
+Details: Antwort: Nintendo Switch Sports Golf
+
+- Wie heisst die Standard-Karte, auf der das klassische 5-gegen-5 in League of Legends gespielt wird?
+Typ: Quiz
+Details: Antwort: Summoner's Rift (Kluft der Beschwoerer)
+
+- Wie viele Ancient Debris brauch man, um komplette Netherite Ausruestung zu craften (Ruestung, 1x Schwert, 2x Pickaxe, 1x Axe, 1x Shovel)?
+Typ: Quiz
+Details: Antwort: 36 Ancient Debris

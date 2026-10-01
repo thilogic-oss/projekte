@@ -1,0 +1,24 @@
+Titel: Ausland / Reisen
+Nummer: 5
+---
+- Reisekontrolle
+Typ: Spiel
+Details: In Simons Koffer wurden 3 ungewoehnliche Gegenstaende gefunden. Er muss erklaeren, warum er sie dabei hat.
+Beispiele: Ein einzelner Gartenzwerg | Kopf einer Wachsfigur | Klobrille | Bild von sich selbst | Ein Globus
+
+- Laender nach Klischees zuordnen
+Typ: Spiel
+Details: Optional mit kleinen Easter Eggs.
+Beispiele: Das Land hat den besten Pizzakaese. Antwort: Italien. PS: Finnland hat nur ganz normalen Pizzakaese. | Ein Land, wo viel geklaut wird. Antwort: Polen. | Wo Pizza auf zu kleinen Pappen serviert wird. Antwort: Spanien (Ibiza). | Menschen, die dort leben, weigern sich Englisch zu sprechen, auch wenn sie es koennten. Antwort: Frankreich. | Dieses Land besteht aus meist Uebergewichtigen. Antwort: USA. | Tee, Teppiche und Katzen auf jedem Markt. Antwort: Tuerkei. | Fjorde und teures Bier. Antwort: Norwegen. | Ampeln werden respektiert, auch wenn nachts keiner kommt. Antwort: Deutschland. | Man hat mehr Schafe als Menschen. Antwort: Neuseeland / Island. | Alles will dich toeten. Antwort: Australien.
+
+- Ich packe meinen Koffer mit ...
+Typ: Spiel
+Details: Die Gaeste machen nacheinander eine Geste, die zu Urlaub passt. Simon muss alle Gesten in der richtigen Reihenfolge nachmachen, bis er patzt. Er darf so viele Schritte gehen, wie er Runden geschafft hat.
+
+- Entweder oder
+Typ: Spiel
+Details: Es wird eine Entweder-oder-Frage gestellt. Das Publikum stimmt ab und Simon muss erraten, wofuer sich die Mehrheit entschieden hat.
+Beispiele: Malle oder Ibiza? | Club oder Kneipe? | Lieber Koffer verlieren oder Handy verlieren? | Lieber mit Simon in den Urlaub oder Simon den Urlaub planen lassen? | Lieber Urlaub mit komplettem Plan oder alles spontan entscheiden? | Bier oder Cocktail? | Pool oder Meer? | Lieber 1 Woche Luxusurlaub oder 3 Wochen guenstiger Urlaub? | Lieber unendliches Leben oder Lebenszeit halbiert? | Bonus: Arsch oder Titten?
+
+- Topfschlagen
+Typ: Spiel

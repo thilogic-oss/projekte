@@ -1,0 +1,41 @@
+Titel: Filme Quiz
+---
+- In welchem Jahr kam der erste Star Wars Film in die Kinos?
+Typ: Quiz
+Details: Antwort: 1977
+
+- Was ist der erfolgreichste Film aller Zeiten (gemessen an den reinen weltweiten Einnahmen)?
+Typ: Quiz
+Details: Antwort: Avatar - Aufbruch nach Pandora (2009)
+
+- In welchem Film hatte der legendaere Marvel-Schoepfer Stan Lee seinen letzten Cameo-Auftritt im MCU?
+Typ: Quiz
+Details: Antwort: Avengers Endgame (1970er Szene)
+
+- Aus welchem Film stammt das Zitat "Strassen? Wo wir hinfahren, brauchen wir keine Strassen."?
+Typ: Quiz
+Details: Antwort: Zurueck in die Zukunft
+
+- Was war der erste abendfuellende Disney Film?
+Typ: Quiz
+Details: Antwort: Schneewittchen und die sieben Zwerge (1937)
+
+- Wie heissen die beiden Freunde von Simba aus Der Koenig der Loewen und welche Art an Tieren sind sie?
+Typ: Quiz
+Details: Antwort: Erdmaennchen Timon und Warzenschwein Pumba
+
+- Wer komponierte die Filmmusik zu unter anderem Jurassic Park, Harry Potter und Indiana Jones?
+Typ: Quiz
+Details: Antwort: John Williams
+
+- Welches bekannte Zitat sagt Yoda zu Luke auf Dagobah (ueber Entschlossenheit)?
+Typ: Quiz
+Details: Antwort: Tu es oder tu es nicht. Es gibt kein Versuchen.
+
+- Wie heisst Thors Hammer aus den MCU Filmen, bevor er zerstoert wird?
+Typ: Quiz
+Details: Antwort: Mjolnir
+
+- Wie heisst der Hauptcharakter Hobbit aus dem gleichnamigen Film?
+Typ: Quiz
+Details: Antwort: Bilbo Beutlin

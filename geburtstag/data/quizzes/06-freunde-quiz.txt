@@ -1,0 +1,41 @@
+Titel: Freunde Quiz
+---
+- Wie viele Leute sind Stand jetzt in der Simons 25. Geburtstags-Gruppe?
+Typ: Quiz
+Details: Antwort: Nachgucken
+
+- Wer ist der groesste Laberkopf in der Truppe?
+Typ: Quiz
+Details: Antwort: Til oder Thilo, gehen beide
+
+- Wer hat als naechstes Geburtstag?
+Typ: Quiz
+Details: Antwort: Die geratene Person fragen und ob noch jemand frueher Geburtstag hat.
+
+- Was ist Simons wahrer DJ-Name?
+Typ: Quiz
+Details: Antwort: DJ Sui
+
+- Wer hat dir zuletzt geschrieben, Kontakt keine Gruppe?
+Typ: Quiz
+Details: Antwort: Nachgucken
+
+- Wie viele Leute aus der Runde kennst du aus der Schule?
+Typ: Quiz
+Details: Antwort: In der Runde nachzaehlen / pruefen.
+
+- Wie viele Leute aus der Runde spielen oder spielten Fussball?
+Typ: Quiz
+Details: Antwort: In der Runde nachzaehlen / pruefen.
+
+- Wer hat die Wii-Fernbedienung gegen den Fernseher geworfen?
+Typ: Quiz
+Details: Antwort: Emily
+
+- Wer hat den goatedsten Spitznamen?
+Typ: Quiz
+Details: Antwort: Thilogisch
+
+- Nenne 5 Urlaube mit Freunden und wohin es ging.
+Typ: Quiz
+Details: Antwort: Simon muss 5 Urlaube mit Freunden und die jeweiligen Ziele nennen.

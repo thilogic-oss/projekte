@@ -1,0 +1,41 @@
+Titel: Musik Quiz
+---
+- Wer ist der erfolgreichste Musikkuenstler der Welt (Band und Solokuenstler)?
+Typ: Quiz
+Details: Antwort: Der erfolgreichste Musikkuenstler der Welt, gemessen an weltweiten Verkaufszahlen, sind The Beatles. Die Beatles haben weltweit ueber 600 Millionen verkaufte Tontraeger erreicht.
+
+- In welchem Jahr brachte der DJ Avicii seine Single Levels heraus?
+Typ: Quiz
+Details: Antwort: Die Single "Levels" von Avicii wurde am 28. Oktober 2011 veroeffentlicht.
+
+- Was ist der meistgestreamte Song von Avicii?
+Typ: Quiz
+Details: Antwort: Der meistgestreamte Song von Avicii ist "Wake Me Up". Er hat ueber 3 Milliarden Streams auf Spotify und ist damit Aviciis erfolgreichster Track ueberhaupt.
+
+- Was ist das groesste EDM-Festival der Welt und wo befindet sich dieses?
+Typ: Quiz
+Details: Antwort: Das groesste EDM-Festival der Welt ist Tomorrowland in Boom, Belgien. Circa 400.000 Besucher pro Jahr.
+
+- Wer ist der beste DJ?
+Typ: Quiz
+Details: Antwort: Borgix
+
+- Wer hat 2010 den ESC gewonnen?
+Typ: Quiz
+Details: Antwort: Lena Meyer-Landrut
+
+- Aus welchem Lied stammt dieser Liedtext: "A singer in a smokey room / A smell of wine and cheap perfume / For a smile they can share the night / It goes on and on and on and on"?
+Typ: Quiz
+Details: Antwort: Don't Stop Believin'
+
+- Welcher Kuenstler traegt den Beinamen "King of Pop"?
+Typ: Quiz
+Details: Antwort: Michael Jackson
+
+- Wie viele Tasten hat ein klassisches Klavier?
+Typ: Quiz
+Details: Antwort: 88
+
+- Wie viele Mitglieder hatten die Beatles?
+Typ: Quiz
+Details: Antwort: Vier

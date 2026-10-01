@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Projektanfrage an Thilogic MultiMedia für Websites von Unternehmen und Sportvereinen."
+    />
+    <title>Anfrage | Thilogic MultiMedia</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+    <link rel="apple-touch-icon" href="assets/images/logo.jpg" />
+    <link rel="stylesheet" href="styles.css?v=20" />
+  </head>
+  <body><a href="../" aria-label="Zur Thilogic-Projektübersicht" style="display:block;position:relative;z-index:30;padding:11px 20px;background:#101014;color:#f5f4f7;font:600 14px/1.4 Segoe UI,sans-serif;text-decoration:underline;text-underline-offset:4px">← Thilogic · Alle Projekte</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Thilogic MultiMedia Startseite">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/images/logo.jpg" alt="" />
+          <span>TM</span>
+        </span>
+        <span class="brand-name">
+          <span>Thilogic</span>
+          <span>MultiMedia</span>
+        </span>
+      </a>
+
+      <nav class="site-nav legal-nav" id="site-nav" aria-label="Seitennavigation">
+        <span class="nav-group nav-scroll-links">
+          <a href="index.html#start" data-i18n="nav.start">Start</a>
+          <a href="index.html#leistungen" data-i18n="nav.services">Leistungen</a>
+          <a href="index.html#pakete" data-i18n="nav.packages">Pakete</a>
+          <a href="index.html#projekte" data-i18n="nav.preview">Projekte</a>
+          <a href="index.html#prozess" data-i18n="nav.process">Ablauf</a>
+        </span>
+        <span class="nav-group nav-page-links">
+          <a href="team.html" data-i18n="nav.team">Team</a>
+          <a class="nav-cta" href="index.html" data-i18n="nav.home">Zur Startseite</a>
+        </span>
+      </nav>
+
+      <div class="header-tools">
+        <div class="header-socials" aria-label="Social Media">
+          <a href="https://www.instagram.com/_thilogic_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+              <circle cx="12" cy="12" r="3.5"></circle>
+              <circle cx="17" cy="7" r="1"></circle>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/thilogicmultimedia" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v5h3v-5h2.3l.7-3h-3V9c0-.6.4-1 1-1Z"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="language-switch" aria-label="Sprache wechseln">
+          <button type="button" data-lang-option="de" aria-pressed="true">DE</button>
+          <button type="button" data-lang-option="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only" data-i18n="nav.open">Menü öffnen</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="request-hero">
+        <div>
+          <p class="eyebrow" data-i18n="request.eyebrow">Projektanfrage</p>
+          <h1 data-i18n="request.title">Erzähl mir kurz von deiner Webpräsenz</h1>
+          <p data-i18n="request.copy">
+            Ob Unternehmen, Verein oder neue Idee: Mit ein paar Infos kann ich besser
+            einschätzen, welches Paket passt und wie der nächste Schritt aussieht.
+          </p>
+        </div>
+      </section>
+
+      <section class="request-layout" aria-label="Anfrageformular">
+        <form class="request-form" action="mailto:info@thilogic-multimedia.de" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label for="name" data-i18n="request.name">Name</label>
+            <input id="name" name="Name" type="text" placeholder="Vorname Nachname" data-i18n-placeholder="request.namePlaceholder" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email" data-i18n="request.email">E-Mail</label>
+            <input id="email" name="E-Mail" type="email" placeholder="name@beispiel.de" required />
+          </div>
+
+          <div class="form-row">
+            <label for="project-type" data-i18n="request.projectType">Projektart</label>
+            <select id="project-type" name="Projektart" required>
+              <option value="" data-i18n="request.choose">Bitte auswählen</option>
+              <option data-i18n="request.businessSite">Unternehmenswebsite</option>
+              <option data-i18n="request.clubSite">Sportverein</option>
+              <option data-i18n="request.redesign">Bestehende Website überarbeiten</option>
+              <option data-i18n="request.other">Sonstiges Projekt</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="package" data-i18n="request.package">Gewünschtes Paket</label>
+            <select id="package" name="Paket">
+              <option value="" data-i18n="request.open">Noch offen</option>
+              <option>Basic - 500 €</option>
+              <option>Plus - 800–1.200 €</option>
+              <option data-i18n="request.supportOption">Langzeit-Support - 40 € / Monat</option>
+            </select>
+          </div>
+
+          <div class="form-row form-row-wide">
+            <label for="message" data-i18n="request.message">Worum geht es?</label>
+            <textarea
+              id="message"
+              name="Nachricht"
+              rows="7"
+              placeholder="Beschreibe kurz, was die Website können soll, welche Inhalte wichtig sind und ob es schon eine bestehende Seite gibt."
+              data-i18n-placeholder="request.messagePlaceholder"
+              required
+            ></textarea>
+          </div>
+
+          <button class="button primary" type="submit" data-i18n="home.contact.cta">Anfrage senden</button>
+        </form>
+
+        <aside class="request-info">
+          <h2 data-i18n="request.helpTitle">Was hilfreich ist</h2>
+          <ul>
+            <li data-i18n="request.help1">Art des Projekts und Zielgruppe</li>
+            <li data-i18n="request.help2">Gewünschtes Paket oder Budgetrahmen</li>
+            <li data-i18n="request.help3">Bestehende Website, falls vorhanden</li>
+            <li data-i18n="request.help4">Wunschdatum für den Start</li>
+          </ul>
+          <p data-i18n="request.mailHint">
+            Das Formular öffnet dein E-Mail-Programm mit den eingetragenen Daten. Die
+            E-Mail-Adresse kannst du später jederzeit im Code austauschen.
+          </p>
+          <div class="request-socials" aria-label="Social Media">
+            <a href="https://www.instagram.com/_thilogic_/" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/thilogicmultimedia" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Thilogic MultiMedia</p>
+      <a href="impressum.html" data-i18n="nav.legal">Impressum</a>
+    </footer>
+
+    <script src="script.js?v=20"></script>
+  </body>
+</html>

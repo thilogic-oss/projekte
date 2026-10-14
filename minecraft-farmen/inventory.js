@@ -21,6 +21,7 @@ function inventoryHTML(materials){
   return `<div class="inventory"><p class="inventory-title">▦ Material-Inventar <span>${total} Slots</span></p><div class="inventory-grid">${slots.join('')}</div>${total>54?`<p class="inventory-overflow">Vorschau: 54 von ${total} Slots. Alle Mengen stehen unten.</p>`:''}<ul class="stack-summary">${parsed.map(m=>`<li><strong>${escapeHTML(m.name)}</strong><span>${m.quantity.toLocaleString('de-DE')} Stück · ${m.stacks} ${m.size===1?'Slots':'Stacks'}${m.rest?' + '+m.rest+' Rest':''} <small>(${m.size} pro Slot)</small></span></li>`).join('')}</ul></div>`;
 }
 function refreshInventoryPreview(){
+  renderMaterialRows();
   const field=$('#form').elements.materials;
   const active=$('#form').elements.materialView.value==='inventory';
   $('#inventory-preview').hidden=!active;

@@ -108,7 +108,7 @@ function renderMaterialRows(){
 function writeDraft(lines){$('#form').elements.materials.value=lines.join('\n');refreshInventoryPreview()}
 function initMaterialPicker(){
   populateMaterialOptions();
-  $('#material-tiles').addEventListener('wheel',e=>{const button=e.target.closest('[data-material]');if(!button||!e.deltaY)return;e.preventDefault();adjustMaterialAmount(button,e.deltaY<0?1:-1)},{passive:false});
+  $('#material-tiles').addEventListener('wheel',e=>{const button=e.target.closest('[data-material]');if(!button||!e.deltaY||!e.shiftKey)return;e.preventDefault();adjustMaterialAmount(button,e.deltaY<0?1:-1)},{passive:false});
   $('#material-tiles').addEventListener('keydown',e=>{const button=e.target.closest('[data-material]');if(button&&['ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();adjustMaterialAmount(button,e.key==='ArrowUp'?1:-1)}});
   $('#inventory-preview').addEventListener('click',removeInventoryStack);
   $('#cards').addEventListener('click',removeInventoryStack);

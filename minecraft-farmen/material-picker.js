@@ -6,21 +6,69 @@ const MATERIAL_CATALOG={
   'Sonstiges':[['Falltür',64],['Tür',64],['Schild',16],['Bett',1],['Leiter',64],['Fackel',64],['Teppich',64],['Schleimblock',64],['Honigblock',64],['Obsidian',64],['Enderperle',16],['Spitzhacke',1],['Namensschild',64]]
 };
 let selectedGroup='Baublöcke';
+const MATERIAL_ART={
+  "Baublöcke": "STONE",
+  "Build-Blöcke": "STONE",
+  "Redstone-Staub": "REDSTONE",
+  "Redstone-Fackel": "REDSTONE_TORCH",
+  "Redstone-Block": "REDSTONE_BLOCK",
+  "Verstärker": "REPEATER",
+  "Komparator": "COMPARATOR",
+  "Beobachter": "OBSERVER",
+  "Kolben": "PISTON",
+  "Klebriger Kolben": "STICKY_PISTON",
+  "Werfer": "DROPPER",
+  "Spender": "DISPENSER",
+  "Hebel": "LEVER",
+  "Knopf": "STONE_BUTTON",
+  "Druckplatte": "STONE_PRESSURE_PLATE",
+  "Tageslichtsensor": "DAYLIGHT_DETECTOR",
+  "Zielblock": "TARGET",
+  "Trichter": "HOPPER",
+  "Truhe": "CHEST",
+  "Redstone-Truhe": "TRAPPED_CHEST",
+  "Fass": "BARREL",
+  "Schienen": "RAIL",
+  "Antriebsschienen": "POWERED_RAIL",
+  "Sensorschienen": "DETECTOR_RAIL",
+  "Lore": "MINECART",
+  "Trichterlore": "HOPPER_MINECART",
+  "Wassereimer": "WATER_BUCKET",
+  "Lavaeimer": "LAVA_BUCKET",
+  "Eimer": "BUCKET",
+  "Erde": "DIRT",
+  "Ackerboden": "FARMLAND",
+  "Sand": "SAND",
+  "Seelensand": "SOUL_SAND",
+  "Weizensamen": "WHEAT_SEEDS",
+  "Karotte": "CARROT",
+  "Kartoffel": "POTATO",
+  "Zuckerrohr": "SUGAR_CANE",
+  "Bambus": "BAMBOO",
+  "Kaktus": "CACTUS",
+  "Knochenmehl": "BONE_MEAL",
+  "Setzling": "OAK_SAPLING",
+  "Moosblock": "MOSS_BLOCK",
+  "Falltür": "OAK_TRAPDOOR",
+  "Tür": "OAK_DOOR",
+  "Schild": "OAK_SIGN",
+  "Bett": "RED_BED",
+  "Leiter": "LADDER",
+  "Fackel": "TORCH",
+  "Teppich": "WHITE_CARPET",
+  "Schleimblock": "SLIME_BLOCK",
+  "Honigblock": "HONEY_BLOCK",
+  "Obsidian": "OBSIDIAN",
+  "Enderperle": "ENDER_PEARL",
+  "Spitzhacke": "IRON_PICKAXE",
+  "Namensschild": "NAME_TAG",
+  "Stein": "STONE",
+  "Glas": "GLASS",
+  "Glasplatten": "GLASS_PANE"
+};
 function materialIcon(name){
-  const red=/Redstone|Verstärker|Komparator|Zielblock/.test(name);
-  const wood=/Holz|Truhe|Fass|Tür|Schild|Leiter|Zaun/.test(name);
-  const green=/Erde|Farm|Samen|Karotte|Kartoffel|Zuckerrohr|Bambus|Kaktus|Setzling|Moos|Schleim/.test(name);
-  let color=red?'#ae2929':wood?'#ac783f':green?'#709c3d':/Glas|Wasser|Eimer/.test(name)?'#78b9d0':/Honig|Sand|Fackel/.test(name)?'#d3b45e':'#93938e';
-  let shape='<path d="M4 7h24v22H4z" fill="'+color+'"/><path d="M4 7h24v6H4z" fill="#ffffff35"/><path d="M22 13h6v16h-6z" fill="#0004"/><path d="M6 16h6v4H6zm9 7h5v4h-5zm0-9h4v4h-4z" fill="#0002"/>';
-  if(/Trichter/.test(name))shape='<path d="M3 6h26v5l-9 10v7h-7V18L3 11z" fill="#71777b"/><path d="M5 7h22v4H5z" fill="#bdc2c3"/><path d="M14 20h5v8h-5z" fill="#454c50"/>';
-  else if(/Truhe|Fass/.test(name))shape+='<path d="M4 14h24v3H4z" fill="#513a22"/><path d="M14 13h5v8h-5z" fill="#e3d799"/>';
-  else if(/Staub/.test(name))shape='<path d="M12 4h7v6h7v6h4v7H19v6h-8v-7H3v-7h9z" fill="#b92b27"/><path d="M14 9h5v9h-5z" fill="#f47449"/>';
-  else if(/Fackel|Hebel/.test(name))shape='<path d="M11 13h8v17h-8z" fill="#a37944"/><path d="M8 4h14v12H8z" fill="'+(red?'#c92e29':'#ffd95b')+'"/><path d="M11 4h6v7h-6z" fill="#fff4ac"/>';
-  else if(/Samen|Knochenmehl/.test(name))shape='<path d="M6 7h7v7H6zm13-3h7v7h-7zM4 21h7v7H4zm12-5h7v7h-7z" fill="'+color+'"/>';
-  else if(/Schienen/.test(name))shape='<path d="M5 2h5v28H5zm17 0h5v28h-5z" fill="#bdc1c0"/><path d="M3 5h26v4H3zm0 9h26v4H3zm0 9h26v4H3z" fill="#946438"/>';
-  else if(/Eimer/.test(name))shape='<path d="M4 6h24v7l-4 16H8L4 13z" fill="#a5afb2"/><path d="M7 8h18v7H7z" fill="'+(/Wasser/.test(name)?'#3688dc':/Lava/.test(name)?'#ec792b':'#465257')+'"/><path d="M9 17h4v9H9z" fill="#dde5e5"/>';
-  else if(/Beobachter|Werfer|Spender/.test(name))shape+='<path d="M8 15h5v5H8zm11 0h5v5h-5zm-6 8h8v3h-8z" fill="#282b29"/>';
-  return '<svg viewBox="0 0 32 32" aria-hidden="true" shape-rendering="crispEdges">'+shape+'</svg>';
+ const id=MATERIAL_ART[name]||'STONE';
+ return '<span class="material-art"><img src="https://raw.githubusercontent.com/Owen1212055/mc-assets/bc96011714c0eb3770bd641a3b86459ad5f860c7/item-assets/'+id+'.png" alt="" loading="lazy" width="64" height="64" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden aria-hidden="true">▦</span></span>';
 }
 function populateMaterialOptions(){
   $('#material-tabs').innerHTML=Object.keys(MATERIAL_CATALOG).map(name=>'<button type="button" data-group="'+escapeHTML(name)+'" aria-pressed="'+(name===selectedGroup)+'">'+escapeHTML(name)+'</button>').join('');

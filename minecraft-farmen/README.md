@@ -21,3 +21,7 @@ In den Repository-Einstellungen unter **Pages** eine passende Veröffentlichungs
 ## Speicherung
 
 Farmen werden ausschließlich in `localStorage` dieses Browsers und dieser Website-Adresse gespeichert. Sie werden nicht automatisch zu GitHub oder zwischen Geräten synchronisiert. Regelmäßig JSON exportieren; das Löschen von Browserdaten entfernt die Sammlung. Import fügt neue IDs hinzu und überschreibt keine bestehenden Einträge. Keine Zugangsdaten erforderlich. Google Fonts ist optional; bei fehlendem Netz greifen lokale Ersatzschriften.
+
+## Item-Grafiken
+
+Die Inventar- und Auswahlgrafiken werden aus [Owen1212055/mc-assets](https://github.com/Owen1212055/mc-assets) geladen (festgelegter Commit bc96011714c0eb3770bd641a3b86459ad5f860c7). Sie zeigen gerenderte Minecraft-Items. Minecraft-Grafiken gehören ihren jeweiligen Rechteinhabern; diese Fanseite ist kein offizielles Minecraft-Produkt. Für die Grafiken ist eine Internetverbindung erforderlich.

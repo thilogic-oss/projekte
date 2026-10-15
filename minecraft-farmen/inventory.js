@@ -8,17 +8,16 @@ function parseMaterial(text){
   return {name,quantity,size,stacks:Math.floor(quantity/size),rest:quantity%size,slots:Math.ceil(quantity/size)};
 }
 function inventoryHTML(materials){
-  if(!materials.length)return '<p class="notes">Noch keine Materialien eingetragen.</p>';
   let parsed;
   try{parsed=materials.map(m=>({...parseMaterial(m.text),done:m.done}))}catch{return '<p class="notes">Für die Inventaransicht bitte die Mengen im Materialfeld prüfen.</p>'}
   const total=parsed.reduce((sum,m)=>sum+m.slots,0);
   const slots=[];
   parsed.forEach(m=>{for(let i=0;i<m.slots&&slots.length<54;i++){
     const amount=Math.min(m.size,m.quantity-i*m.size);
-    slots.push(`<div class="inventory-slot ${m.done?'collected':''}" title="${escapeHTML(m.name)}: ${amount} / ${m.size}" aria-label="${escapeHTML(m.name)}, ${amount} Stück"><span class="item-block" aria-hidden="true">▦</span><span class="slot-name">${escapeHTML(m.name)}</span><b>${amount}</b></div>`);
+    slots.push(`<div class="inventory-slot ${m.done?'collected':''}" title="${escapeHTML(m.name)}: ${amount} / ${m.size}" aria-label="${escapeHTML(m.name)}, ${amount} Stück">${materialIcon(m.name)}${amount>1?`<b>${amount}</b>`:''}</div>`);
   }});
-  while(slots.length%9)slots.push('<div class="inventory-slot blank" aria-hidden="true"></div>');
-  return `<div class="inventory"><p class="inventory-title">▦ Material-Inventar <span>${total} Slots</span></p><div class="inventory-grid">${slots.join('')}</div>${total>54?`<p class="inventory-overflow">Vorschau: 54 von ${total} Slots. Alle Mengen stehen unten.</p>`:''}<ul class="stack-summary">${parsed.map(m=>`<li><strong>${escapeHTML(m.name)}</strong><span>${m.quantity.toLocaleString('de-DE')} Stück · ${m.stacks} ${m.size===1?'Slots':'Stacks'}${m.rest?' + '+m.rest+' Rest':''} <small>(${m.size} pro Slot)</small></span></li>`).join('')}</ul></div>`;
+  while(slots.length<27||slots.length%9)slots.push('<div class="inventory-slot blank" aria-hidden="true"></div>');
+  return `<div class="inventory"><p class="inventory-title">▦ Material-Inventar <span>${total} Slots</span></p><div class="inventory-grid">${slots.join('')}</div>${total>54?`<p class="inventory-overflow">Vorschau: 54 von ${total} Slots. Alle Mengen stehen unten.</p>`:''}<details class="inventory-legend"><summary>Materialnamen & Mengen</summary><ul class="stack-summary">${parsed.map(m=>`<li><strong>${escapeHTML(m.name)}</strong><span>${m.quantity.toLocaleString('de-DE')} Stück · ${m.stacks} ${m.size===1?'Slots':'Stacks'}${m.rest?' + '+m.rest+' Rest':''} <small>(${m.size} pro Slot)</small></span></li>`).join('')}</ul></details></div>`;
 }
 function refreshInventoryPreview(){
   renderMaterialRows();

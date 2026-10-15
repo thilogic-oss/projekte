@@ -1,5 +1,5 @@
 const MATERIAL_CATALOG={
-  'Baublöcke':[['Baublöcke',64],['Stein',64],['Bruchstein',64],['Tiefenschiefer',64],['Erde',64],['Glas',64],['Glasplatten',64],['Holzbretter',64],['Holzstämme',64],['Steinziegel',64],['Halbstufen',64],['Treppen',64],['Zäune',64],['Mauern',64]],
+  'Baublöcke':[['Baublöcke',64]],
   'Redstone':[['Redstone-Staub',64],['Redstone-Fackel',64],['Redstone-Block',64],['Verstärker',64],['Komparator',64],['Beobachter',64],['Kolben',64],['Klebriger Kolben',64],['Werfer',64],['Spender',64],['Hebel',64],['Knopf',64],['Druckplatte',64],['Tageslichtsensor',64],['Zielblock',64]],
   'Transport & Lager':[['Trichter',64],['Truhe',64],['Redstone-Truhe',64],['Fass',64],['Schienen',64],['Antriebsschienen',64],['Sensorschienen',64],['Lore',1],['Trichterlore',1]],
   'Farm & Natur':[['Wassereimer',1],['Lavaeimer',1],['Eimer',16],['Erde',64],['Ackerboden',64],['Sand',64],['Seelensand',64],['Weizensamen',64],['Karotte',64],['Kartoffel',64],['Zuckerrohr',64],['Bambus',64],['Kaktus',64],['Knochenmehl',64],['Setzling',64],['Moosblock',64]],

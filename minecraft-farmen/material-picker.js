@@ -1,11 +1,10 @@
 const MATERIAL_CATALOG={
-  'Baublöcke':[['Build-Blöcke',64],['Stein',64],['Bruchstein',64],['Tiefenschiefer',64],['Erde',64],['Glas',64],['Glasplatten',64],['Holzbretter',64],['Holzstämme',64],['Steinziegel',64],['Halbstufen',64],['Treppen',64],['Zäune',64],['Mauern',64]],
+  'Baublöcke':[['Baublöcke',64],['Stein',64],['Bruchstein',64],['Tiefenschiefer',64],['Erde',64],['Glas',64],['Glasplatten',64],['Holzbretter',64],['Holzstämme',64],['Steinziegel',64],['Halbstufen',64],['Treppen',64],['Zäune',64],['Mauern',64]],
   'Redstone':[['Redstone-Staub',64],['Redstone-Fackel',64],['Redstone-Block',64],['Verstärker',64],['Komparator',64],['Beobachter',64],['Kolben',64],['Klebriger Kolben',64],['Werfer',64],['Spender',64],['Hebel',64],['Knopf',64],['Druckplatte',64],['Tageslichtsensor',64],['Zielblock',64]],
   'Transport & Lager':[['Trichter',64],['Truhe',64],['Redstone-Truhe',64],['Fass',64],['Schienen',64],['Antriebsschienen',64],['Sensorschienen',64],['Lore',1],['Trichterlore',1]],
   'Farm & Natur':[['Wassereimer',1],['Lavaeimer',1],['Eimer',16],['Erde',64],['Ackerboden',64],['Sand',64],['Seelensand',64],['Weizensamen',64],['Karotte',64],['Kartoffel',64],['Zuckerrohr',64],['Bambus',64],['Kaktus',64],['Knochenmehl',64],['Setzling',64],['Moosblock',64]],
   'Sonstiges':[['Falltür',64],['Tür',64],['Schild',16],['Bett',1],['Leiter',64],['Fackel',64],['Teppich',64],['Schleimblock',64],['Honigblock',64],['Obsidian',64],['Enderperle',16],['Spitzhacke',1],['Namensschild',64]]
 };
-let selectedMaterial='Build-Blöcke';
 let selectedGroup='Baublöcke';
 function materialIcon(name){
   const red=/Redstone|Verstärker|Komparator|Zielblock/.test(name);
@@ -25,13 +24,21 @@ function materialIcon(name){
 }
 function populateMaterialOptions(){
   $('#material-tabs').innerHTML=Object.keys(MATERIAL_CATALOG).map(name=>'<button type="button" data-group="'+escapeHTML(name)+'" aria-pressed="'+(name===selectedGroup)+'">'+escapeHTML(name)+'</button>').join('');
-  $('#material-tiles').innerHTML=MATERIAL_CATALOG[selectedGroup].map(([name])=>'<button type="button" class="material-tile" data-material="'+escapeHTML(name)+'" aria-pressed="'+(name===selectedMaterial)+'">'+materialIcon(name)+'<span>'+escapeHTML(name)+'</span></button>').join('');
-  $('#selected-material').innerHTML=materialIcon(selectedMaterial)+'<strong>'+escapeHTML(selectedMaterial)+'</strong>';
+  $('#material-tiles').innerHTML=MATERIAL_CATALOG[selectedGroup].map(([name,size])=>'<button type="button" class="material-tile" data-material="'+escapeHTML(name)+'">'+materialIcon(name)+'<span>+'+size+' '+escapeHTML(name)+'</span></button>').join('');
+
 }
-function chooseMaterial(name){
-  selectedMaterial=name;
-  $('#material-stack').value=String(MATERIAL_CATALOG[selectedGroup].find(item=>item[0]===name)[1]);
-  populateMaterialOptions();
+function addMaterialStack(name){
+  const entry=MATERIAL_CATALOG[selectedGroup].find(item=>item[0]===name);
+  if(!entry)return;
+  const size=entry[1],lines=draftMaterials();
+  const index=lines.findIndex(text=>{try{const m=parseMaterial(text);return m.name===name&&m.size===size}catch{return false}});
+  const quantity=(index>=0?parseMaterial(lines[index]).quantity:0)+size;
+  if(quantity>1000000){toast('Maximal 1.000.000 Stück pro Material.');return}
+  if(index<0&&lines.length>=500){toast('Maximal 500 Materialien pro Farm.');return}
+  const text=quantity+' × '+name+' | '+size;
+  if(index>=0)lines[index]=text;else lines.push(text);
+  writeDraft(lines);
+  $('#material-feedback').textContent=name+': '+quantity.toLocaleString('de-DE')+' Stück';
 }
 function draftMaterials(){return $('#form').elements.materials.value.split('\n').map(s=>s.trim()).filter(Boolean)}
 function renderMaterialRows(){
@@ -43,17 +50,8 @@ function renderMaterialRows(){
 function writeDraft(lines){$('#form').elements.materials.value=lines.join('\n');refreshInventoryPreview()}
 function initMaterialPicker(){
   populateMaterialOptions();
-  $('#material-tabs').onclick=e=>{const button=e.target.closest('[data-group]');if(!button)return;selectedGroup=button.dataset.group;chooseMaterial(MATERIAL_CATALOG[selectedGroup][0][0])};
-  $('#material-tiles').onclick=e=>{const button=e.target.closest('[data-material]');if(button)chooseMaterial(button.dataset.material)};
-  $('#material-quick').onclick=e=>{const button=e.target.closest('[data-amount]');if(button)$('#material-quantity').value=button.dataset.amount};
-  $('#material-add').onclick=()=>{
-    const name=selectedMaterial;
-    const quantity=Number($('#material-quantity').value),size=Number($('#material-stack').value);
-    if(!name||name.length>100||/[\n\r|]/.test(name)){toast('Bitte einen Materialnamen mit maximal 100 Zeichen eingeben.');return}
-    if(!Number.isSafeInteger(quantity)||quantity<1||quantity>1000000){toast('Bitte eine ganze Menge von 1 bis 1.000.000 wählen.');return}
-    const lines=draftMaterials();if(lines.length>=500){toast('Maximal 500 Materialien pro Farm.');return}
-    lines.push(`${quantity} × ${name} | ${size}`);writeDraft(lines);
-  };
+  $('#material-tabs').onclick=e=>{const button=e.target.closest('[data-group]');if(!button)return;selectedGroup=button.dataset.group;populateMaterialOptions()};
+  $('#material-tiles').onclick=e=>{const button=e.target.closest('[data-material]');if(button)addMaterialStack(button.dataset.material)};
   $('#material-rows').onclick=e=>{const button=e.target.closest('[data-remove]');if(!button)return;writeDraft(draftMaterials().filter((_,index)=>index!==Number(button.dataset.remove)))};
   $('#material-rows').onchange=e=>{
     if(!e.target.matches('[data-edit]'))return;

@@ -70,17 +70,27 @@ function materialIcon(name){
  const id=MATERIAL_ART[name]||'STONE';
  return '<span class="material-art"><img src="https://raw.githubusercontent.com/Owen1212055/mc-assets/bc96011714c0eb3770bd641a3b86459ad5f860c7/item-assets/'+id+'.png" alt="" loading="lazy" width="64" height="64" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden aria-hidden="true">▦</span></span>';
 }
+const materialAmounts={};
+function clickAmount(name,size){return materialAmounts[name]??size}
+function adjustMaterialAmount(button,delta){
+ const name=button.dataset.material;
+ const size=MATERIAL_CATALOG[selectedGroup].find(m=>m[0]===name)[1];
+ materialAmounts[name]=Math.max(0,Math.min(64,clickAmount(name,size)+delta));
+ button.lastElementChild.textContent='+'+materialAmounts[name]+' '+name;
+ button.setAttribute('aria-label','+'+materialAmounts[name]+' '+name);
+}
 function populateMaterialOptions(){
   $('#material-tabs').innerHTML=Object.keys(MATERIAL_CATALOG).map(name=>'<button type="button" data-group="'+escapeHTML(name)+'" aria-pressed="'+(name===selectedGroup)+'">'+escapeHTML(name)+'</button>').join('');
-  $('#material-tiles').innerHTML=MATERIAL_CATALOG[selectedGroup].map(([name,size])=>'<button type="button" class="material-tile" data-material="'+escapeHTML(name)+'">'+materialIcon(name)+'<span>+'+size+' '+escapeHTML(name)+'</span></button>').join('');
+  $('#material-tiles').innerHTML=MATERIAL_CATALOG[selectedGroup].map(([name,size])=>'<button type="button" class="material-tile" data-material="'+escapeHTML(name)+'">'+materialIcon(name)+'<span>+'+clickAmount(name,size)+' '+escapeHTML(name)+'</span></button>').join('');
 
 }
 function addMaterialStack(name){
   const entry=MATERIAL_CATALOG[selectedGroup].find(item=>item[0]===name);
   if(!entry)return;
-  const size=entry[1],lines=draftMaterials();
+  const size=entry[1],amount=clickAmount(name,size),lines=draftMaterials();
+  if(!amount)return;
   const index=lines.findIndex(text=>{try{const m=parseMaterial(text);return m.name===name&&m.size===size}catch{return false}});
-  const quantity=(index>=0?parseMaterial(lines[index]).quantity:0)+size;
+  const quantity=(index>=0?parseMaterial(lines[index]).quantity:0)+amount;
   if(quantity>1000000){toast('Maximal 1.000.000 Stück pro Material.');return}
   if(index<0&&lines.length>=500){toast('Maximal 500 Materialien pro Farm.');return}
   const text=quantity+' × '+name+' | '+size;
@@ -98,6 +108,10 @@ function renderMaterialRows(){
 function writeDraft(lines){$('#form').elements.materials.value=lines.join('\n');refreshInventoryPreview()}
 function initMaterialPicker(){
   populateMaterialOptions();
+  $('#material-tiles').addEventListener('wheel',e=>{const button=e.target.closest('[data-material]');if(!button||!e.deltaY)return;e.preventDefault();adjustMaterialAmount(button,e.deltaY<0?1:-1)},{passive:false});
+  $('#material-tiles').addEventListener('keydown',e=>{const button=e.target.closest('[data-material]');if(button&&['ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();adjustMaterialAmount(button,e.key==='ArrowUp'?1:-1)}});
+  $('#inventory-preview').addEventListener('click',removeInventoryStack);
+  $('#cards').addEventListener('click',removeInventoryStack);
   $('#material-tabs').onclick=e=>{const button=e.target.closest('[data-group]');if(!button)return;selectedGroup=button.dataset.group;populateMaterialOptions()};
   $('#material-tiles').onclick=e=>{const button=e.target.closest('[data-material]');if(button)addMaterialStack(button.dataset.material)};
   $('#material-rows').onclick=e=>{const button=e.target.closest('[data-remove]');if(!button)return;writeDraft(draftMaterials().filter((_,index)=>index!==Number(button.dataset.remove)))};
@@ -109,4 +123,17 @@ function initMaterialPicker(){
     if(!Number.isSafeInteger(quantity)||quantity<1||quantity>1000000){toast('Bitte eine ganze Menge von 1 bis 1.000.000 wählen.');renderMaterialRows();return}
     lines[index]=`${quantity} × ${m.name} | ${size}`;writeDraft(lines);
   };
+}
+
+function removeInventoryStack(e){
+ const button=e.target.closest('[data-remove-stack]');if(!button)return;
+ const index=Number(button.dataset.removeStack),amount=Number(button.dataset.amount);
+ const preview=button.closest('#inventory-preview');
+ const card=button.closest('.card');
+ const lines=preview?draftMaterials():farms.find(f=>f.id===card?.dataset.id)?.materials.map(m=>m.text);
+ if(!lines||!lines[index])return;
+ const m=parseMaterial(lines[index]),remaining=m.quantity-amount;
+ if(preview){if(remaining>0)lines[index]=remaining+' × '+m.name+' | '+m.size;else lines.splice(index,1);writeDraft(lines)}
+ else{const next=farms.map(f=>f.id!==card.dataset.id?f:{...f,materials:f.materials.flatMap((material,i)=>i!==index?[material]:remaining>0?[{...material,text:remaining+' × '+m.name+' | '+m.size}]:[])});if(!save(next))return}
+ toast(amount+' × '+m.name+' entfernt.');
 }

@@ -111,7 +111,6 @@ function initMaterialPicker(){
   $('#material-tiles').addEventListener('wheel',e=>{const button=e.target.closest('[data-material]');if(!button||!e.deltaY||!e.shiftKey)return;e.preventDefault();adjustMaterialAmount(button,e.deltaY<0?1:-1)},{passive:false});
   $('#material-tiles').addEventListener('keydown',e=>{const button=e.target.closest('[data-material]');if(button&&['ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();adjustMaterialAmount(button,e.key==='ArrowUp'?1:-1)}});
   $('#inventory-preview').addEventListener('click',removeInventoryStack);
-  $('#cards').addEventListener('click',removeInventoryStack);
   $('#material-tabs').onclick=e=>{const button=e.target.closest('[data-group]');if(!button)return;selectedGroup=button.dataset.group;populateMaterialOptions()};
   $('#material-tiles').onclick=e=>{const button=e.target.closest('[data-material]');if(button)addMaterialStack(button.dataset.material)};
   $('#material-rows').onclick=e=>{const button=e.target.closest('[data-remove]');if(!button)return;writeDraft(draftMaterials().filter((_,index)=>index!==Number(button.dataset.remove)))};
@@ -129,11 +128,11 @@ function removeInventoryStack(e){
  const button=e.target.closest('[data-remove-stack]');if(!button)return;
  const index=Number(button.dataset.removeStack),amount=Number(button.dataset.amount);
  const preview=button.closest('#inventory-preview');
- const card=button.closest('.card');
- const lines=preview?draftMaterials():farms.find(f=>f.id===card?.dataset.id)?.materials.map(m=>m.text);
- if(!lines||!lines[index])return;
+ if(!preview||!$('#editor').open)return;
+ const lines=draftMaterials();
+ if(!lines[index])return;
  const m=parseMaterial(lines[index]),remaining=m.quantity-amount;
- if(preview){if(remaining>0)lines[index]=remaining+' × '+m.name+' | '+m.size;else lines.splice(index,1);writeDraft(lines)}
- else{const next=farms.map(f=>f.id!==card.dataset.id?f:{...f,materials:f.materials.flatMap((material,i)=>i!==index?[material]:remaining>0?[{...material,text:remaining+' × '+m.name+' | '+m.size}]:[])});if(!save(next))return}
+ if(remaining>0)lines[index]=remaining+' × '+m.name+' | '+m.size;else lines.splice(index,1);
+ writeDraft(lines);
  toast(amount+' × '+m.name+' entfernt.');
 }
